@@ -31,12 +31,6 @@ Request Body:
 
 ```
 GET api/users/:id
-```
-Request Body:
-
-```
-{ id: Integer }
-```
 
 Note: This endpoint should be used after logging in and decoding the JWT
 token in the front end to get the userId to retrieve all user attributes.

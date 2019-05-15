@@ -18,7 +18,9 @@ ActiveRecord::Schema.define(version: 2019_05_11_004939) do
   create_table "users", force: :cascade do |t|
     t.string "email"
     t.string "username"
-    t.string "image_url"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "image_url", default: "https://res.cloudinary.com/dg3xzcms5/image/upload/v1548039381/images/default-profile-icon-24.jpg"
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

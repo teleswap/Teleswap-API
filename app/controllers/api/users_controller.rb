@@ -10,10 +10,9 @@ class Api::UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      render :ok, json: @user.to_json
+      render "api/users/show", status: :ok
     else
       @errors = @user.errors.full_messages
-      debugger
       render json: { message: @errors }, status: :unauthorized
     end
   end

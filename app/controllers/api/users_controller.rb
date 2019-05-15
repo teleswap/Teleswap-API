@@ -1,5 +1,7 @@
 class Api::UsersController < ApplicationController
 
+  before_action :verify_jwt_token, except: [:create]
+
   def show
     @user = User.find(params[:id])
   end
@@ -11,6 +13,7 @@ class Api::UsersController < ApplicationController
       render :ok, json: @user.to_json
     else
       @errors = @user.errors.full_messages
+      debugger
       render json: { message: @errors }, status: :unauthorized
     end
   end
@@ -18,7 +21,7 @@ class Api::UsersController < ApplicationController
 
   private
   def user_params
-    params.permit(:email, :username, :password, :image_url)
+    params.permit(:first_name, :last_name, :email, :username, :password)
   end
 
 end

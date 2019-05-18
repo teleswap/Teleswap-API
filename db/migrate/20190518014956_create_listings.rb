@@ -8,6 +8,7 @@ class CreateListings < ActiveRecord::Migration[5.2]
       t.float :latitude
       t.string :city
       t.integer :zip_code
+      t.references :user, foreign_key: true
 
       t.timestamps
     end

@@ -1,0 +1,1 @@
+json.(@listing, :id, :title, :body, :longitude, :latitude, :image_url, :city, :zip_code)

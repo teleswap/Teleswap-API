@@ -1,6 +1,6 @@
 class Api::UsersController < ApplicationController
 
-  before_action :verify_jwt_token, except: [:create]
+  #before_action :verify_jwt_token, except: [:create]
 
   def show
     @user = User.find(params[:id])

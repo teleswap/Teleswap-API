@@ -5,4 +5,8 @@ class User < ApplicationRecord
   validates :email, :username, presence: true, uniqueness: true
   validates :email, format: {with: VALID_EMAIL_REGEX}
 
+  has_many :listings
+  has_many :offers
+
+
 end

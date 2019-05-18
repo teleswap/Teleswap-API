@@ -14,5 +14,5 @@ class Api::OffersController < ApplicationController
   def destroy
 
   end
-  
+
 end

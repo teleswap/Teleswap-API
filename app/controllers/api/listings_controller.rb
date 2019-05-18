@@ -7,7 +7,7 @@ class Api::ListingsController < ApplicationController
     end
 
     if params[:id].present?
-      @responses = Listing.all
+      @listings = Listing.all
     end
   end
 

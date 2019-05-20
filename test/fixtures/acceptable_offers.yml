@@ -2,12 +2,16 @@
 
 one:
   title: MyString
-  year: 1
+  year: MyInteger
   description: MyString
   image_url: MyString
+  listing: one
+  user: one
 
 two:
   title: MyString
-  year: 1
+  year: MyInteger
   description: MyString
   image_url: MyString
+  listing: two
+  user: two

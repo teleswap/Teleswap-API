@@ -7,7 +7,6 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :last_name
       t.string :image_url, default: 'https://res.cloudinary.com/dg3xzcms5/image/upload/v1548039381/images/default-profile-icon-24.jpg'
       t.string :password_digest
-
       t.timestamps
     end
   end

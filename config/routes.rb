@@ -9,10 +9,12 @@ Rails.application.routes.draw do
     end
 
     resources :listings do
-      resources :offers
+      resources :acceptable_offers
     end
 
-    resources :offers
+    resources :acceptable_offers do
+      resources :counter_offers
+    end
 
     resources :tokens, only: [:create]
   end

@@ -6,7 +6,8 @@ class User < ApplicationRecord
   validates :email, format: {with: VALID_EMAIL_REGEX}
 
   has_many :listings
-  has_many :offers
+  has_many :acceptable_offers, through: :listings
+  has_many :counter_offers, through: :acceptable_offers
 
 
 end

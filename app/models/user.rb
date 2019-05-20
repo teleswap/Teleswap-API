@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many :listings
   has_many :acceptable_offers, through: :listings
   has_many :counter_offers, through: :acceptable_offers
+  has_one :image
 
 
 end

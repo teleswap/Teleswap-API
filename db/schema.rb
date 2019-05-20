@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_20_034203) do
+ActiveRecord::Schema.define(version: 2019_05_20_064755) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,18 @@ ActiveRecord::Schema.define(version: 2019_05_20_034203) do
     t.index ["user_id"], name: "index_counter_offers_on_user_id"
   end
 
+  create_table "images", force: :cascade do |t|
+    t.string "url"
+    t.bigint "listing_id"
+    t.bigint "user_id"
+    t.bigint "counter_offer_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["counter_offer_id"], name: "index_images_on_counter_offer_id"
+    t.index ["listing_id"], name: "index_images_on_listing_id"
+    t.index ["user_id"], name: "index_images_on_user_id"
+  end
+
   create_table "listings", force: :cascade do |t|
     t.string "title"
     t.string "body"
@@ -72,5 +84,8 @@ ActiveRecord::Schema.define(version: 2019_05_20_034203) do
   add_foreign_key "counter_offers", "acceptable_offers"
   add_foreign_key "counter_offers", "listings"
   add_foreign_key "counter_offers", "users"
+  add_foreign_key "images", "counter_offers"
+  add_foreign_key "images", "listings"
+  add_foreign_key "images", "users"
   add_foreign_key "listings", "users"
 end

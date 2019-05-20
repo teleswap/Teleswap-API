@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dxatasmrh
+  api_key: '299844516776262'
+  api_secret: "-sBWURPpq71vEnKVxKF9zPIvSTQ"
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: dxatasmrh
+  api_key: '299844516776262'
+  api_secret: "-sBWURPpq71vEnKVxKF9zPIvSTQ"
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: dxatasmrh
+  api_key: '299844516776262'
+  api_secret: "-sBWURPpq71vEnKVxKF9zPIvSTQ"
+  enhance_image_tag: true
+  static_file_support: false

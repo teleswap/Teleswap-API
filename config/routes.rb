@@ -17,5 +17,6 @@ Rails.application.routes.draw do
     end
 
     resources :tokens, only: [:create]
+    resources :images, only: [:create]
   end
 end

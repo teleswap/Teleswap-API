@@ -1,1 +1,1 @@
-json.array! @listings, :id, :title, :body, :longitude, :latitude, :image_url, :city, :zip_code
+json.array! @listings, :id, :title, :body, :longitude, :latitude, :image_url, :city, :zip_code, :images
